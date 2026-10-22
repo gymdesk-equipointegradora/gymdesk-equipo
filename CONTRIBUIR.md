@@ -21,3 +21,4 @@ No necesitas saber programar. Todo se puede hacer desde la página de GitHub.
 - Cada carpeta de `entregas/` tiene su `README.md`: no lo borres.
 - No subas datos personales de nadie (teléfonos, correos, cuentas): el repositorio es público.
 - Si algo sale en rojo y no sabes por qué, comenta en tu Pull Request y te ayudamos.
+- Cualquier otra duda, consúltala con el Gerente del Proyecto (Oscar).

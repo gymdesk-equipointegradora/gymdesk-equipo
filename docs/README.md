@@ -3,6 +3,12 @@
 Plan del proyecto según el Método Escala ("Administración Profesional de
 Proyectos – La Guía", Chamoun).
 
+- **Libro:** [libro.md](libro.md), qué parte del libro APP usar para cada documento.
+- **Faltan:** ver [pendientes.md](pendientes.md), con responsable e instrucciones.
+- **Plantilla:** [plantilla-documento.docx](plantilla-documento.docx) para los documentos nuevos.
+
+## Hechos
+
 | # | Documento | Archivo |
 |---|---|---|
 | 01 | Charter | [01-charter.docx](01-charter.docx) |
