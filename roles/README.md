@@ -16,11 +16,13 @@ cómo hacerlos y en qué tareas de clase participas normalmente.
 ## Reglas para todos
 
 - Los documentos siguen el libro **"Administración Profesional de Proyectos – La
-  Guía"** (Chamoun, Método Escala). Si la profesora pide algo distinto, manda lo
+  Guía"** (Chamoun, Método Escala); ver [docs/libro.md](../docs/libro.md). Si la profesora pide algo distinto, manda lo
   que pida ella.
 - Usa la [plantilla de Word](../docs/plantilla-documento.docx) para que todos los
   documentos se vean iguales: título, banda de fecha y revisión, barras grises por
   sección y firmas al final.
 - Los números (fechas, costos, precios, horas) salen de los documentos que ya
   existen. Si algo no cuadra, pregunta antes de inventarlo.
+- **Cualquier duda, consúltala con el Gerente del Proyecto (Oscar).** Mejor
+  preguntar a tiempo que entregar algo que no cuadra.
 - Cuando termines, súbelo a `docs/` o a la carpeta de la entrega y abre un Pull Request.

@@ -3,6 +3,10 @@
 Espacio de trabajo del equipo de **Grid.mx** para el proyecto GymDesk: documentos
 del libro, pruebas, entregas de clase y seguimiento de tareas.
 
+> **¿Tienes dudas?** Cualquier duda del proyecto, de tu rol, de una tarea o del
+> libro, consúltala con el Gerente del Proyecto, Oscar Espinoza: por WhatsApp o
+> con un issue de tipo **Tarea** asignado a él.
+>
 > **¿Necesitas algo técnico?** Capturas, una versión del instalador, datos de cómo
 > funciona algo, comandos o diagramas del sistema: abre un issue de tipo **Tarea**
 > y asígnalo a Oscar (o avísale por WhatsApp). Se te pasa por escrito.
@@ -20,10 +24,11 @@ Funciona completo sin internet y los datos se quedan en la computadora del gimna
 
 1. Busca tu nombre en [`roles/`](roles/) y lee tu guía: qué te toca, qué documentos
    del libro son tuyos y cómo hacerlos.
-2. Revisa [`docs/pendientes.md`](docs/pendientes.md): los documentos del libro que
+2. Lee [`docs/libro.md`](docs/libro.md): qué partes del libro APP usamos y cómo conseguirlo.
+3. Revisa [`docs/pendientes.md`](docs/pendientes.md): los documentos del libro que
    faltan, con responsable e instrucciones.
-3. Revisa [`entregas/`](entregas/): las tareas de Classroom abiertas y tu parte en cada una.
-4. Para subir tu trabajo, sigue [CONTRIBUIR.md](CONTRIBUIR.md).
+4. Revisa [`entregas/`](entregas/): las tareas de Classroom abiertas y tu parte en cada una.
+5. Para subir tu trabajo, sigue [CONTRIBUIR.md](CONTRIBUIR.md).
 
 ## Equipo y roles
 

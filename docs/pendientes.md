@@ -4,7 +4,8 @@ Herramientas del Método Escala que faltan en el Plan del Proyecto (partidas del
 1.1.1 a 1.1.5). Cada una tiene responsable, de qué documentos sale su información y
 qué debe contener.
 
-**Para todos:** usa la [plantilla](plantilla-documento.docx). Los documentos de
+**Para todos:** antes de empezar, lee en el [libro](libro.md) la herramienta que te
+toca; ahí vienen sus ejemplos. Dudas, con el Gerente del Proyecto. Usa la [plantilla](plantilla-documento.docx). Los documentos de
 planeación van con **Fecha: 30 de marzo de 2026, Revisión 1**, igual que el WBS y
 las matrices. Firman la Patrocinadora (Profa. Julieta Edith Hernández Guzmán) y el
 Gerente del Proyecto (Oscar Espinoza Landeta). Nombre del archivo: el siguiente
