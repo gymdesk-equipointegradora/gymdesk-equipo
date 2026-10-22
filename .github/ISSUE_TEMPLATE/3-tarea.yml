@@ -1,0 +1,24 @@
+name: Tarea
+description: Una tarea de Classroom o una solicitud al equipo
+title: "[Tarea] "
+labels: ["tarea"]
+body:
+  - type: input
+    id: entrega
+    attributes:
+      label: Fecha de entrega
+      placeholder: "2026-10-23"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Qué se pide
+    validations:
+      required: true
+  - type: textarea
+    id: reparto
+    attributes:
+      label: Quién hace qué
+      value: |
+        - [ ] (nombre): (qué entrega)

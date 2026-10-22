@@ -1,0 +1,68 @@
+# Pipeline de Integración Continua del repositorio del equipo.
+# Commit (Pull Request) -> Build (preparar) -> Test (revisiones) -> Resultado.
+# Si una revisión falla, el Pull Request queda en rojo y no se puede fusionar a main.
+name: Revisión
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  estructura:
+    name: Estructura y nombres
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Nombres en minúsculas y sin espacios
+        run: |
+          malos=$(git ls-files | grep -v '^\.github/' | grep -vE '^[a-z0-9./_-]+$' | grep -v 'README.md$' | grep -v 'CONTRIBUIR.md$' || true)
+          if [ -n "$malos" ]; then
+            echo "::error::Renombra estos archivos (minúsculas, sin espacios ni acentos):"
+            echo "$malos"
+            exit 1
+          fi
+      - name: Cada entrega tiene su README
+        run: |
+          faltan=0
+          for d in entregas/*/; do
+            if [ ! -f "${d}README.md" ]; then echo "::error::Falta ${d}README.md"; faltan=1; fi
+          done
+          exit $faltan
+      - name: Sin datos personales evidentes
+        run: |
+          if git grep -nIE '\b[0-9]{4}[ -]?[0-9]{4}[ -]?[0-9]{4}[ -]?[0-9]{4}\b|\b[0-9]{10}\b|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}' -- ':!.github' ; then
+            echo "::error::Se encontraron números de tarjeta, teléfonos o correos. Quítalos antes de fusionar."
+            exit 1
+          fi
+
+  documentos:
+    name: Formato de los documentos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Revisar Markdown
+        run: npx --yes markdownlint-cli2@0.14.0 "**/*.md"
+      - name: Revisar enlaces internos
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          rotos = []
+          for md in pathlib.Path(".").rglob("*.md"):
+              for destino in re.findall(r"\]\(([^)#]+)\)", md.read_text(encoding="utf-8")):
+                  if destino.startswith(("http", "mailto:")):
+                      continue
+                  if not (md.parent / destino).exists():
+                      rotos.append(f"{md}: {destino}")
+          if rotos:
+              print("::error::Enlaces rotos:\n" + "\n".join(rotos))
+              sys.exit(1)
+          print("Todos los enlaces internos existen")
+          PY

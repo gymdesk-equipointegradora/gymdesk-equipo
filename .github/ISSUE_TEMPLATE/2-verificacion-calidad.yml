@@ -1,0 +1,37 @@
+name: Verificación de calidad
+description: Revisión de un entregable contra sus criterios de aceptación (Calidad)
+title: "[Calidad] "
+labels: ["calidad"]
+body:
+  - type: input
+    id: entregable
+    attributes:
+      label: Entregable revisado
+      placeholder: "Cuestionario para validar el MVP"
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios revisados
+      description: Marca los que se cumplen
+      value: |
+        - [ ] Criterio 1
+        - [ ] Criterio 2
+        - [ ] Criterio 3
+    validations:
+      required: true
+  - type: dropdown
+    id: dictamen
+    attributes:
+      label: Dictamen
+      options:
+        - Aprobado
+        - Aprobado con observaciones
+        - Rechazado
+    validations:
+      required: true
+  - type: textarea
+    id: observaciones
+    attributes:
+      label: Observaciones
